@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LEARNING TOGETHER (LT) | IA & Personalización</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Lato:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1 class="logo">LT<span>.IA</span></h1>
+            <nav id="main-nav">
+                <button class="menu-toggle" aria-label="Toggle navigation">&#9776;</button>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#catalogo">Rutas</a></li>
+                    <li><a href="#mision">Misión</a></li>
+                    <li><a href="#contacto" class="cta-link">Regístrate</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h2>Domina la IA con tu Ruta de Aprendizaje <span class="accent">Personalizada</span></h2>
+                    <p>La brecha entre interés y aprendizaje se resuelve con nuestra metodología adaptativa asistida por AURA.</p>
+                    <a href="#contacto" class="btn btn-primary">Empieza tu Ruta Personalizada</a>
+                </div>
+                <div class="hero-image">
+                                    </div>
+            </div>
+        </section>
+
+        <section id="catalogo" class="section-padding">
+            <div class="container">
+                <h3>Nuestras Rutas de Dominio</h3>
+                <p>El contenido relevante y la personalización asistida por IA destacan en nuestros programas.</p>
+                <div class="rutas-grid">
+                    <article class="ruta-card">
+                        <i class="fas fa-robot"></i>
+                        <h4>Large Language Models (LLMs)</h4>
+                        <p>Aprende a diseñar, entrenar y aplicar modelos de lenguaje avanzados para soluciones empresariales.</p>
+                        <a href="#contacto" class="btn btn-secondary">Registrarse</a>
+                    </article>
+                    <article class="ruta-card">
+                        <i class="fab fa-python"></i>
+                        <h4>Python y Data Science</h4>
+                        <p>Dominio de Python para el análisis de datos, Machine Learning y automatización de procesos.</p>
+                        <a href="#contacto" class="btn btn-secondary">Registrarse</a>
+                    </article>
+                    <article class="fas fa-lightbulb">
+                        <i class="fas fa-lightbulb"></i>
+                        <h4>Prompt Engineering Avanzado</h4>
+                        <p>Domina el arte de comunicarte con la IA para obtener resultados precisos y creativos.</p>
+                        <a href="#contacto" class="btn btn-secondary">Registrarse</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="contacto" class="section-padding accent-bg">
+            <div class="container">
+                <div class="contacto-flex">
+                    <div class="form-container">
+                        <h3>Inicia tu Trayectoria Personalizada</h3>
+                        <p>Completa el formulario para agendar una cita de diagnóstico y comenzar tu ruta.</p>
+                        <form id="registroForm">
+                            <div class="form-group">
+                                <label for="nombre">Nombre Completo:</label>
+                                <input type="text" id="nombre" name="nombre" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Correo Electrónico:</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="interes">Área de Interés:</label>
+                                <select id="interes" name="interes" required>
+                                    <option value="" disabled selected>Selecciona una Ruta</option>
+                                    <option value="LLMs">LLMs</option>
+                                    <option value="Python">Python y Data Science</option>
+                                    <option value="Prompt Engineering">Prompt Engineering</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="nivel">Nivel de Conocimiento:</label>
+                                <input type="text" id="nivel" name="nivel" placeholder="Ej: Básico, Intermedio en Python" required>
+                            </div>
+                            <button type="submit" class="btn btn-submit">Enviar Registro y Agendar Cita</button>
+                            <p id="formMessage" class="message-status"></p>
+                        </form>
+                    </div>
+
+                    <div class="asesoria-links">
+                        <h4>Asesoría Directa</h4>
+                        <a href="https://wa.me/TUNUMERO?text=Hola%2C%20estoy%20interesado%20en%20las%20Rutas%20Personalizadas." target="_blank" class="btn btn-whatsapp">
+                            <i class="fab fa-whatsapp"></i> Pregunta por WhatsApp
+                        </a>
+                        <p class="small-text">O interactúa con nuestro Asistente:</p>
+                        <div class="aura-placeholder">
+                            [Widget Asistente AURA (BuilderBot) aquí]
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 LEARNING TOGETHER (LT). Todos los derechos reservados.</p>
+            <div class="legal-links">
+                <a href="#">Política de Privacidad</a> | 
+                <a href="#">Términos y Condiciones</a>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/TUNUMERO?text=Hola%2C%20estoy%20interesado%20en%20las%20Rutas%20Personalizadas." target="_blank" class="floating-whatsapp" aria-label="Chatear por WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+    
+    <script src="app.js"></script>
+    </body>
+</html>

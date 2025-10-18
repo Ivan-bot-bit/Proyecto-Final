@@ -1,0 +1,418 @@
+/* Variables de Colores */
+:root {
+    --color-primary: #5A189A; /* Morado/Azul Oscuro (IA, Tecnología) [cite: 25] */
+    --color-secondary: #00FFC0; /* Verde Neón (Acento/CTA) [cite: 26] */
+    --color-text: #333333;
+    --color-background: #F8F9FA; /* Gris Claro (Limpieza) [cite: 27] */
+    --color-white: #FFFFFF;
+}
+
+/* Estilos Globales */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Lato', sans-serif; /* Fuente clara para el cuerpo del texto  */
+    line-height: 1.6;
+    background-color: var(--color-background);
+    color: var(--color-text);
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Montserrat', sans-serif; /* Fuente legible y moderna para títulos  */
+    color: var(--color-primary);
+    margin-bottom: 0.5em;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-primary);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.section-padding {
+    padding: 60px 0;
+}
+
+.accent {
+    color: var(--color-secondary);
+}
+
+/* Botones y CTAs */
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+    text-align: center;
+}
+
+.btn-primary {
+    background-color: var(--color-secondary);
+    color: var(--color-primary);
+    border: 2px solid var(--color-secondary);
+}
+
+.btn-primary:hover {
+    background-color: #00E6AD; /* Tono más oscuro de neón */
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--color-primary);
+    border: 2px solid var(--color-primary);
+    padding: 8px 15px;
+}
+
+.btn-secondary:hover {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+.btn-whatsapp {
+    background-color: #25D366; /* Color de WhatsApp */
+    color: var(--color-white);
+    margin-top: 15px;
+    width: 100%;
+}
+
+.btn-whatsapp:hover {
+    background-color: #1EBE5A;
+}
+
+/* Header y Navegación */
+header {
+    background-color: var(--color-white);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 15px 0;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: 700;
+}
+
+.logo span {
+    color: var(--color-secondary);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 25px;
+}
+
+nav ul a {
+    font-weight: 700;
+    padding: 5px 0;
+    position: relative;
+}
+
+nav ul a:hover::after,
+nav ul a.cta-link {
+    color: var(--color-secondary);
+}
+
+.menu-toggle {
+    display: none; /* Oculto en escritorio */
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
+    color: var(--color-primary);
+}
+
+/* Sección Hero (Home) */
+.hero {
+    background: linear-gradient(135deg, var(--color-primary), #723D9E);
+    color: var(--color-white);
+    padding: 100px 0;
+}
+
+.hero .container {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.hero-content {
+    flex: 1;
+}
+
+.hero-content h2 {
+    color: var(--color-white);
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 1.1em;
+    margin-bottom: 30px;
+}
+
+.hero-image {
+    flex: 1;
+    min-height: 300px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    /* Simula la imagen o carrusel */
+    display: grid;
+    place-items: center;
+    font-style: italic;
+}
+
+/* Catálogo/Rutas */
+#catalogo {
+    text-align: center;
+}
+
+.rutas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.ruta-card {
+    background-color: var(--color-white);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s;
+}
+
+.ruta-card:hover {
+    transform: translateY(-5px);
+}
+
+.ruta-card i {
+    font-size: 3em;
+    color: var(--color-secondary);
+    margin-bottom: 15px;
+}
+
+/* Contacto (Formulario y Asesoría) */
+.accent-bg {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+.accent-bg h3 {
+    color: var(--color-secondary);
+}
+
+.contacto-flex {
+    display: flex;
+    gap: 50px;
+    align-items: flex-start;
+}
+
+.form-container, .asesoria-links {
+    flex: 1;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+
+.form-group input, .form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+.btn-submit {
+    background-color: var(--color-secondary);
+    color: var(--color-primary);
+    width: 100%;
+    border: none;
+    cursor: pointer;
+}
+
+.message-status {
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 4px;
+    text-align: center;
+    font-weight: 700;
+}
+
+/* Pie de Página */
+footer {
+    background-color: #333;
+    color: var(--color-white);
+    padding: 20px 0;
+    font-size: 0.9em;
+}
+
+footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.legal-links a {
+    color: var(--color-white);
+    margin-left: 15px;
+}
+
+/* Botón Flotante de WhatsApp */
+.floating-whatsapp {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background-color: #25D366;
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-size: 1.5em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+
+/* 3. Responsividad y Usabilidad (Mobile-First y Media Queries) */
+/* Diseño Móvil (Menos de 768px - Mobile-First) [cite: 35] */
+
+/* Navegación para móvil (Menú Hamburguesa) */
+#main-nav ul {
+    display: none; /* Ocultar en móvil por defecto */
+    flex-direction: column;
+    position: absolute;
+    top: 60px; /* Debajo del header */
+    left: 0;
+    width: 100%;
+    background-color: var(--color-white);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+    z-index: 999;
+}
+
+#main-nav ul.active {
+    display: flex;
+}
+
+#main-nav ul li {
+    margin: 0;
+    padding: 10px 20px;
+    border-bottom: 1px solid var(--color-background);
+}
+
+#main-nav ul li a {
+    display: block;
+    font-size: 1.1em;
+    color: var(--color-primary);
+}
+
+header .menu-toggle {
+    display: block; /* Mostrar el botón hamburguesa en móvil */
+}
+
+/* Ajustes en Hero para móvil */
+.hero .container {
+    flex-direction: column;
+    text-align: center;
+}
+
+.hero-image {
+    order: -1; /* Mover la imagen arriba del texto en móvil */
+    margin-bottom: 30px;
+}
+
+.hero-content h2 {
+    font-size: 2em;
+}
+
+/* Ajustes en Contacto para móvil */
+.contacto-flex {
+    flex-direction: column;
+}
+
+.asesoria-links {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.btn-whatsapp {
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Media Query para Tablet y Escritorio (Punto de Quiebre > 768px)  */
+@media (min-width: 768px) {
+    /* Restaurar navegación de escritorio */
+    #main-nav ul {
+        display: flex;
+        position: static;
+        flex-direction: row;
+        box-shadow: none;
+        padding: 0;
+    }
+
+    #main-nav ul li {
+        border-bottom: none;
+        margin-left: 25px;
+        padding: 0;
+    }
+
+    header .menu-toggle {
+        display: none;
+    }
+
+    /* Restaurar Hero a diseño horizontal */
+    .hero .container {
+        flex-direction: row;
+        text-align: left;
+    }
+
+    .hero-image {
+        order: initial;
+    }
+
+    .hero-content h2 {
+        font-size: 3em;
+    }
+
+    /* Restaurar Contacto a diseño horizontal */
+    .contacto-flex {
+        flex-direction: row;
+    }
+}
+
+/* Media Query para Escritorio Grande (> 1024px) */
+@media (min-width: 1024px) {
+    .hero-content h2 {
+        font-size: 3.5em;
+    }
+}
